@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  jenkins_demo:
+    image: IMAGE_LATEST
+    deploy:
+      restart_policy:
+        condition: on-failure
+    expose:
+      - "80"
+    ports:
+      - 8081:80
