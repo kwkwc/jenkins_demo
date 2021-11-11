@@ -6,7 +6,7 @@ COPY ./index.html /usr/share/nginx/html/index.html
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
 
-EXPOSE 8081
+EXPOSE 80
 
 STOPSIGNAL SIGTERM
 
