@@ -32,4 +32,4 @@ sed -i s%IMAGE_LATEST%$IMAGE%g docker-compose.jenkins.yml && \
 
 # 使用 docker stack 启动服务
 #docker stack deploy -c docker-compose.jenkins.yml $CONTAINER
-docker run --rm -d -p 8081:80 $IMAGE  
+docker run --expose=[80] -d -p 8081:80 $IMAGE  
